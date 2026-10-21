@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" data-motion="full">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#151719">
   <meta name="description" content="Собирайте кубик Рубика в своём ритме. Плавный 3D-кубик, понятные подсказки со стрелками и ничего лишнего.">
   <title>FORMA — Кубик в твоём ритме</title>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css?v=4">
 </head>
 <body>
   <header class="header">
@@ -30,7 +30,7 @@
           <div class="hint-card" id="hintCard"><div class="hint-card-top"><span class="tiny-dot"></span><span id="hintLabel">ТВОЙ СЛЕДУЮЩИЙ ХОД</span><span id="hintFraction">—</span></div><div class="hint-direction"><span id="hintArrow">↻</span><div><strong id="hintFace">Доверься интуиции</strong><span id="hintDescription">Или включи подсказки выше</span></div><b id="hintNotation">?</b></div><p id="hintDetail">Стрелка на кубике покажет нужную грань и направление поворота.</p><button id="applyHint" disabled>Сделать этот ход <span>↗</span></button></div>
         </section>
         <div class="actions"><button class="primary-button" id="scramble"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h3c4 0 8 12 12 12h3m-4-4 4 4-4 4M3 18h3c1.5 0 3-2 4-4m4-4c1-2 2.5-4 4-4h3m-4-4 4 4-4 4"/></svg>Перемешать</button><button class="secondary-button" id="undo" aria-label="Отменить последний ход" disabled>↶</button></div>
-        <div class="speed-row"><label for="speed">Плавность поворота</label><select id="speed"><option value="500">Плавно</option><option value="280">Быстро</option><option value="850">Медленно</option></select></div>
+        <div class="speed-row"><label for="speed">Плавность поворота</label><select id="speed"><option value="700">Плавно</option><option value="420">Быстро</option><option value="1100">Медленно</option></select></div><div class="speed-row motion-row"><label for="motionMode">Анимации</label><select id="motionMode"><option value="full">Плавные</option><option value="system">Как в системе</option><option value="off">Выключены</option></select></div>
       </aside>
     </section>
     <section class="controls-section"><div class="controls-heading"><h2>Каждый поворот — ближе.</h2><p>Выбери грань. Нажми на стрелку.</p></div><div class="face-controls" id="faceControls"></div><div class="keyboard-note"><span>SHIFT</span> + клавиша грани<br>поворот против часовой</div></section>
@@ -39,5 +39,5 @@
   <div class="toast" id="toast" role="status"></div>
   <dialog id="guide"><div class="dialog-top"><span class="eyebrow">НЕБОЛЬШОЕ ЗНАКОМСТВО</span><button class="icon-button" id="closeGuide" aria-label="Закрыть инструкцию">×</button></div><h2>Шесть граней.<br>Одна цель.</h2><p>Собери кубик так, чтобы каждая сторона стала одного цвета. Центральные квадраты задают цвет своей грани.</p><div class="guide-item"><b>01</b><div><h3>Осмотрись</h3><p>Потяни свободный фон, чтобы осмотреть кубик. Правая кнопка мыши или Alt + перетаскивание вращают обзор даже поверх кубика. Кнопка ⤢ возвращает исходный ракурс.</p></div></div><div class="guide-item"><b>02</b><div><h3>Сделай поворот</h3><p>Зажми любой квадратик и потяни вдоль ряда — выбранный слой будет следовать за мышью или пальцем. Так можно вращать и средние слои. Кнопки R, L, U, D, F, B тоже поворачивают грани. ↻ — по часовой стрелке, ↶ — против, если смотреть прямо на выбранную грань. Клавиатура: буква грани; Shift + буква — обратный поворот.</p></div></div><div class="guide-item"><b>03</b><div><h3>Попроси подсказку</h3><p>Включи переключатель: камера покажет нужную грань, а стрелка — направление. Нажми «Сделать этот ход» или поверни грань сам. Обозначение 2 означает поворот на 180°.</p></div></div><button class="primary-button" id="startPlaying">Понятно, попробуем <span>↗</span></button></dialog>
   <script src="./cube.js"></script>
-  <script type="module" src="./app.js"></script>
+  <script type="module" src="./app.js?v=4"></script>
 </body></html>
